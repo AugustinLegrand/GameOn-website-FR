@@ -267,6 +267,10 @@ input {
   font-size: 0.6em;
 }
 
+.error-input {
+  border-color: red;
+}
+
 /* 
 input[data-error]::after {
     content: attr(data-error);

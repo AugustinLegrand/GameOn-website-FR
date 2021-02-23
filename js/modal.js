@@ -129,38 +129,48 @@ function formRegister (event) {
     console.log(messagesForm.name);
     errors.firstName.innerHTML = messagesForm.name;
     validateForm = false;
+    firstName.classList.add("error-input");
   }else {
       errors.firstName.innerHTML = "";
+      firstName.classList.remove("error-input");
   }
 
   if (lastName.value.length < 3) {
       console.log(messagesForm.name);
       errors.lastName.innerHTML = messagesForm.name;
       validateForm = false;
+      lastName.classList.add("error-input");
   } else {
       errors.lastName.innerHTML = "";
+      lastName.classList.remove("error-input");
   }
 
   if (!email.value.match(mailRegex)) {
       console.log(messagesForm.email);
       errors.email.innerHTML = messagesForm.email;
       validateForm = false;
+      email.classList.add("error-input");
   } else {
       errors.email.innerHTML = "";
+      email.classList.remove("error-input");
   }
 
   if (birthDate.value == "") {
     errors.birthDate.innerHTML = messagesForm.birthDate;
       validateForm = false;
+      birthDate.classList.add("error-input");
   } else {
     errors.birthDate.innerHTML = "";
+    birthDate.classList.remove("error-input");
   }
 
   if (quantity.value == "" && !isNaN(quantity.value)) {
     errors.quantity.innerHTML = messagesForm.number;
       validateForm = false;
+      quantity.classList.add("error-input");
   } else {
     errors.quantity.innerHTML = "";
+    quantity.classList.remove("error-input");
   }
 
   optionForm(() => {
