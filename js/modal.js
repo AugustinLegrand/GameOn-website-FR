@@ -89,7 +89,6 @@ function init(app, modal) {
   
 };
 
-
 function closeModalRegister() {
   modal.modalbg.style.display = "none";
 }
